@@ -166,8 +166,8 @@ table td {
     <hr size="1" noshade="noshade" />
     <table width="100%">
         <tr>
-            <td width="50%" align="center">Library Staf<br /><br /><?php echo $_SESSION['realname']; ?></td>
-            <td width="50%" align="center">Library member<br /><br /><?php echo $_SESSION['receipt_record']['memberName']; ?></td>
+            <td width="50%" align="center">Library Staff<br /><br /><?php echo $_SESSION['realname']; ?></td>
+            <td width="50%" align="center">Library Member<br /><br /><?php echo $_SESSION['receipt_record']['memberName']; ?></td>
         </tr>
     </table>
 </div>
