@@ -53,7 +53,7 @@ if ((bool) ini_get('safe_mode')) {
 
 // set default timezone
 // for a list of timezone, please see PHP Manual at "List of Supported Timezones" section
-@date_default_timezone_set('Asia/Jakarta');
+@date_default_timezone_set('Asia/Kolkata');
 
 // senayan version
 define('SENAYAN_VERSION', 'SLiMS 7 (Cendana)');
@@ -189,7 +189,7 @@ $sysconf['enable_xml_result'] = true;
 
 /* DATABASE BACKUP config */
 // specify the full path of mysqldump binary
-$sysconf['mysqldump'] = '/usr/bin/mysqldump';
+$sysconf['mysqldump'] = 'D:\mysqldump';
 // backup location (make sure it is accessible and rewritable to webserver!)
 $sysconf['temp_dir'] = '/tmp';
 $sysconf['backup_dir'] = UPLOAD.'backup'.DS;
@@ -317,7 +317,7 @@ $sysconf['mimetype']['xml'] = 'text/xml';
 $sysconf['mimetype']['mrc'] = 'text/marc';
 
 /* PRICE CURRENCIES SETTING */
-$sysconf['currencies'] = array( array('0', 'NONE'), 'Rupiah', 'USD', 'Euro', 'DM', 'Pounds', 'Yen', 'Won', 'Yuan', 'SGD', 'Bath', 'Ruppee', 'Taka', 'AUD');
+$sysconf['currencies'] = array( array('0', 'NONE'), 'Rupiah', 'USD', 'Euro', 'DM', 'Pounds', 'Yen', 'Won', 'Yuan', 'SGD', 'Bath', 'Rupees', 'Taka', 'AUD');
 
 /* RESERVE PERIODE (In Days) */
 $sysconf['reserve_expire_periode'] = 7;
@@ -433,14 +433,14 @@ $sysconf['index']['sphinx_opts'] = array(
  * Captcha Settings
  */
 // Captcha settings for Senayan Management Console (aka Librarian Login)
-$sysconf['captcha']['smc']['enable'] = false; // value can be 'true' or 'false'
+$sysconf['captcha']['smc']['enable'] = true; // value can be 'true' or 'false'
 $sysconf['captcha']['smc']['type'] = 'recaptcha'; // value can be 'recaptcha' (at this time)
 if ($sysconf['captcha']['smc']['enable']) {
     include_once LIB.$sysconf['captcha']['smc']['type'].DS.'smc_settings.inc.php';
 }
 
 // Captcha settings for Member Login
-$sysconf['captcha']['member']['enable'] = false; // value can be 'true' or 'false'
+$sysconf['captcha']['member']['enable'] = true; // value can be 'true' or 'false'
 $sysconf['captcha']['member']['type'] = 'recaptcha'; // value can be 'recaptcha' (at this time)
 if ($sysconf['captcha']['member']['enable']) {
     include_once LIB.$sysconf['captcha']['member']['type'].DS.'member_settings.inc.php';
@@ -450,13 +450,13 @@ if ($sysconf['captcha']['member']['enable']) {
  * Mailing Settings
  */
 $sysconf['mail']['enable'] = true;
-$sysconf['mail']['server'] = 'ssl://smtp.gmail.com:465'; // SMTP server
+$sysconf['mail']['server'] = 'ssl://smtp.zoho.com:465'; // SMTP server
 $sysconf['mail']['server_port'] = 465; // the SMTP port
 $sysconf['mail']['auth_enable'] = true; // enable SMTP authentication
-$sysconf['mail']['auth_username'] = 'admin'; // SMTP account username
-$sysconf['mail']['auth_password'] = 'admin'; // SMTP account password
-$sysconf['mail']['from'] = 'admin@localhost';
-$sysconf['mail']['from_name'] = 'SLiMS Administrator';
+$sysconf['mail']['auth_username'] = 'admin@nahahealthclinic.org'; // SMTP account username
+$sysconf['mail']['auth_password'] = 'summerof69**'; // SMTP account password
+$sysconf['mail']['from'] = 'admin@nahahealthclinic.org';
+$sysconf['mail']['from_name'] = 'Naha Library Service Admin';
 $sysconf['mail']['reply_to'] = &$sysconf['mail']['from'];
 $sysconf['mail']['reply_to_name'] = &$sysconf['mail']['from_name'];
 
